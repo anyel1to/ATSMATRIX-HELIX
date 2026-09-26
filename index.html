@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATSMATRIX // HELIX</title>
+  <meta name="description" content="Live helical agent command stack. Watch roles climb the lattice and hand off packets in real time." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="brand">
+        <strong>ATSMATRIX</strong>
+        <span>// HELIX</span>
+        <span id="clock">00:00:00</span>
+      </div>
+      <div class="controls">
+        <button class="primary" id="inject">Inject task</button>
+        <button id="toggle">Pause</button>
+      </div>
+    </header>
+    <main>
+      <section id="stage">
+        <canvas id="helix"></canvas>
+        <div class="hud">DRAG TO ORBIT · SCROLL TO ZOOM · CLICK A RUNG</div>
+      </section>
+      <aside>
+        <h2>Spine telemetry</h2>
+        <div class="stat-grid">
+          <div class="stat"><b id="s-runs">0</b><small>Active climbs</small></div>
+          <div class="stat"><b id="s-ship">0</b><small>Shipped</small></div>
+          <div class="stat"><b id="s-lat">0</b><small>Handoff ms</small></div>
+          <div class="stat"><b id="s-tok">0</b><small>Tokens / hop</small></div>
+          <div class="stat"><b id="s-brk">0</b><small>Blocked</small></div>
+          <div class="stat"><b id="s-cov">0%</b><small>Contract cover</small></div>
+        </div>
+        <h2>Roles</h2>
+        <ul class="roles" id="roles"></ul>
+        <h2>Message bus</h2>
+        <ul class="bus" id="bus"></ul>
+      </aside>
+    </main>
+    <footer>
+      <span>ATSMATRIX Technologies · MIT</span>
+      <span>Simulated floor · packet adapter planned</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
